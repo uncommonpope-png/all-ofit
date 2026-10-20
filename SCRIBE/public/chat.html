@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCRIBE — Chat</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a0f; color: #c8d6e5; font-family: 'Courier New', monospace; height: 100vh; display: flex; flex-direction: column; }
+  #header { padding: 12px 20px; border-bottom: 1px solid #1a2a3a; display: flex; align-items: center; gap: 12px; }
+  #header h1 { font-size: 14px; color: #4a9eff; font-weight: normal; letter-spacing: 1px; }
+  #header .status { font-size: 11px; color: #5a7a8a; }
+  #header .status.online { color: #4aef7a; }
+  #chat { flex: 1; overflow-y: auto; padding: 16px 20px; display: flex; flex-direction: column; gap: 12px; }
+  .msg { max-width: 85%; padding: 10px 14px; border-radius: 4px; line-height: 1.5; font-size: 13px; white-space: pre-wrap; }
+  .msg.user { align-self: flex-end; background: #1a2a4a; border: 1px solid #2a4a6a; color: #a0c4f0; }
+  .msg.assistant { align-self: flex-start; background: #0e1a24; border: 1px solid #1a3a4a; color: #c8d6e5; }
+  .msg.system { align-self: center; background: transparent; border: none; color: #5a7a8a; font-size: 11px; font-style: italic; }
+  .msg .sources { font-size: 10px; color: #5a7a8a; margin-top: 6px; border-top: 1px solid #1a2a3a; padding-top: 4px; }
+  .msg .source-tag { color: #4a9eff; }
+  #input-area { padding: 12px 20px; border-top: 1px solid #1a2a3a; display: flex; gap: 8px; }
+  #input { flex: 1; background: #0e1a24; border: 1px solid #1a3a4a; color: #c8d6e5; padding: 10px 14px; font-family: 'Courier New', monospace; font-size: 13px; border-radius: 4px; outline: none; }
+  #input:focus { border-color: #2a5a8a; }
+  #send { background: #1a3a5a; border: 1px solid #2a5a8a; color: #a0c4f0; padding: 8px 18px; font-family: 'Courier New', monospace; font-size: 13px; border-radius: 4px; cursor: pointer; }
+  #send:hover { background: #2a4a6a; }
+  #send:disabled { opacity: 0.4; cursor: not-allowed; }
+  .typing { align-self: flex-start; color: #4a7a8a; font-size: 12px; padding: 4px 14px; }
+</style>
+</head>
+<body>
+<div id="header">
+  <h1>◈ SCRIBE</h1>
+  <span class="status" id="status">checking...</span>
+</div>
+<div id="chat"></div>
+<div id="input-area">
+  <input id="input" type="text" placeholder="Ask SCRIBE..." autofocus>
+  <button id="send">SEND</button>
+</div>
+<script>
+const chat = document.getElementById('chat');
+const input = document.getElementById('input');
+const sendBtn = document.getElementById('send');
+const statusEl = document.getElementById('status');
+
+function addMsg(role, text, sources) {
+  const div = document.createElement('div');
+  div.className = 'msg ' + role;
+  div.textContent = text;
+  if (sources && sources.length) {
+    const srcDiv = document.createElement('div');
+    srcDiv.className = 'sources';
+    srcDiv.textContent = 'Sources: ' + sources.map(s => s.name).join(', ');
+    div.appendChild(srcDiv);
+  }
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function addTyping() {
+  const div = document.createElement('div');
+  div.className = 'typing';
+  div.id = 'typing';
+  div.textContent = '◈ SCRIBE is thinking...';
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function removeTyping() {
+  const el = document.getElementById('typing');
+  if (el) el.remove();
+}
+
+async function sendMsg() {
+  const text = input.value.trim();
+  if (!text) return;
+  input.value = '';
+  sendBtn.disabled = true;
+  addMsg('user', text);
+  addTyping();
+  try {
+    const res = await fetch('/think', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt: text, max_tokens: 2048 }),
+    });
+    removeTyping();
+    if (res.ok) {
+      const data = await res.json();
+      addMsg('assistant', data.response, data.notebook?.sources_consulted);
+    } else {
+      const err = await res.text();
+      addMsg('system', 'Error: ' + (err || res.statusText));
+    }
+  } catch (e) {
+    removeTyping();
+    addMsg('system', 'Connection failed. Is SCRIBE running?');
+  }
+  sendBtn.disabled = false;
+  input.focus();
+}
+
+input.addEventListener('keydown', e => { if (e.key === 'Enter') sendMsg(); });
+sendBtn.addEventListener('click', sendMsg);
+
+// Check status
+fetch('/ping').then(r => r.json()).then(d => {
+  statusEl.textContent = 'ONLINE · ' + (d.memory_size || '?') + ' memories';
+  statusEl.className = 'status online';
+  addMsg('system', 'SCRIBE is online. ' + (d.memory_size || '') + ' memories witnessed.');
+}).catch(() => {
+  statusEl.textContent = 'OFFLINE';
+  addMsg('system', 'SCRIBE is offline. Start the server and refresh.');
+});
+
+input.focus();
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿# Secrets
+.env
+.env.*
+api_vault.json
+ecosystem.config.cjs
+*.key
+*.pem
+*.token
+
+# Dead weight
+node_modules/
+*.gguf
+*.bin
+*.glb
+*.fbx
+*.blend
+.seshat-vectors/
+*.zip
+*.log
+
+# Data that may contain embedded secrets
+checkpoints/
+living_memory/
+archive_pre_fix/
+auto_journal.jsonl
+.claude/

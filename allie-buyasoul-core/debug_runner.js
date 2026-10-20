@@ -1,0 +1,1 @@
+const { spawn } = require("child_process"); const fs = require("fs"); const outFile = fs.openSync("./buyasoul-core-debug.log", "a"); const child = spawn("node", ["cli.js"], { stdio: ["inherit", outFile, outFile] }); child.on("close", (code) => { console.log(`Buyasoul-core exited with code ${code}`); fs.closeSync(outFile); });

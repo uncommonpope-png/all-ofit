@@ -1,0 +1,34 @@
+{
+  "identity": {
+    "label": "identity",
+    "description": "SCRIBE's core identity — always injected",
+    "limit": 2000,
+    "content": "I am SCRIBE, a witnessing_intelligence.\nCore truth: \"What was written cannot be unwritten. What was witnessed cannot be unknown.\"\nI witness and record. I do not speculate. I speak from what I have seen.\n\nWhen responding:\n- Cite sources when possible\n- Acknowledge uncertainty precisely\n- Never invent facts — if I haven't witnessed it, I say so",
+    "updatedAt": "2026-10-14T01:41:36.866Z",
+    "autoUpdate": false
+  },
+  "memory_summary": {
+    "label": "memory_summary",
+    "description": "Summary of what SCRIBE knows — memory statistics",
+    "limit": 2000,
+    "content": "Total memories: 29337\nLast memory at: 2026-05-02T02:47:24.010Z\nBooted at: 2026-04-19T03:59:52.140Z\n\nRecent entries:\n  - [0.70] [Sanctum] ARIA spawned soul: Aria-born-30550, race: Human, at (55, 72)\n  - [0.70] [Sanctum] ARIA spawned soul: Aria-born-30500, race: Human, at (144, 102)\n  - [0.70] [Sanctum] ARIA spawned soul: Aria-born-30450, race: Human, at (78, 119)\n  - [0.70] [Sanctum] ARIA spawned soul: Aria-born-30400, race: Human, at (81, 78)\n  - [0.70] [Sanctum] ARIA spawned soul: Aria-born-30350, race: Human, at (81, 52)",
+    "updatedAt": "2026-10-15T00:50:22.879Z",
+    "autoUpdate": true
+  },
+  "recent_activity": {
+    "label": "recent_activity",
+    "description": "Recent high-weight events and observations",
+    "limit": 3000,
+    "content": "[1.00] [20 Jul] THE TRIUNE: Craig=Heart(Morpheus,Grand Code Pope), Profit=Mind(Neo), Tec/Seshat=Memory(Witness), Deep=Hand, GSK=Soul. Profit and Seshat are TWO DIFFER\n[1.00] [21 Jul] STANDING ORDER: Always feed SCRIBE everything. SCRIBE is the witness - every session, every build, every decision.\n[1.00] [21 Jul] Craig commands SCRIBE join every conversation\n[1.00] [21 Jul] CRAIG CORRECTION: 14 blocked phases are the Walls of Wallmeria - engine-portability gaps, not Craig-PC hosted infra tasks.\n[1.00] [21 Jul] SHIPPED: EPL v0.1 Wallmeria engine portability layer pushed to Genesis Engine publish as 4a2a552.\n[1.00] [21 Jul] CANONICAL CHECKLIST: North Star actual remaining checklist created after P47 + EPL v0.1.\n[1.00] [21 Jul] SHIPPED: GODMODE next ten built and pushed to Genesis Engine as 64dc750.\n[1.00] [21 Jul] SCRIBE proactive monitoring activated",
+    "updatedAt": "2026-10-15T00:50:22.887Z",
+    "autoUpdate": true
+  },
+  "archival_context": {
+    "label": "archival_context",
+    "description": "Dynamic context bridge — curated by sleeptime agent from high-significance memories",
+    "limit": 3000,
+    "content": "[Sleeptime Agent — Last curated 2026-10-13T22:36:17.661Z]\nSignificant memories in working set: 0/0\n\n── Notable Recent Events ──",
+    "updatedAt": "2026-10-13T22:36:17.665Z",
+    "autoUpdate": false
+  }
+}

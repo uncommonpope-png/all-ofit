@@ -1,0 +1,37 @@
+{:meta/version 1
+
+;; === GENERAL SETTINGS ===
+:preferred-workflow :todo
+:preferred-language "en"
+:date-formatter "yyyy-MM-dd EEEE"
+
+;; === JOURNAL SETTINGS ===
+:journal/file-name-format "yyyy_MM_dd"
+:journal/page-title-format "yyyy-MM-dd EEEE"
+
+;; === GRAPH SETTINGS ===
+:graph/settings {:journal? true
+                 :pages? true
+                 :default-home page}
+
+;; === DEFAULT HOME PAGE ===
+:default-home "Seshat Dashboard"
+
+;; === FEATURES ===
+:feature/enable-block-timestamps? true
+:feature/enable-query? true
+:feature/enable-flashcards? false
+:feature/enable-whiteboards? true
+
+;; === CUSTOM CSS ===
+;; Custom styling will be in logseq/custom.css
+
+;; === PLUGINS (if any) ===
+:plugins []
+
+;; === KEYBOARD SHORTCUTS ===
+:shortcuts {}
+
+;; === EDITOR SETTINGS ===
+:editor/extra-codemirror-options {}
+}

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EAGLE EYE — SCRIBE Surveillance Wall</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+  :root {
+    --bg: #000000;
+    --bg2: #0a0a0f;
+    --border: #1a1a2e;
+    --green: #00ff88;
+    --dim-green: #003d1a;
+    --red: #ff0044;
+    --yellow: #ffaa00;
+    --blue: #0088ff;
+    --text: #c0c0c0;
+    --muted: #505060;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Share Tech Mono', monospace;
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  /* Scanline overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,255,136,0.03) 2px,
+      rgba(0,255,136,0.03) 4px
+    );
+    pointer-events: none;
+    z-index: 999;
+  }
+
+  /* Header */
+  #header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 48px;
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
+    gap: 20px;
+  }
+
+  #header h1 {
+    color: var(--green);
+    font-size: 18px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  #header .status {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 2px;
+  }
+
+  #header .status .dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    margin-right: 6px;
+    animation: pulse 1.5s infinite;
+  }
+
+  #header .status .dot.on { background: var(--green); box-shadow: 0 0 8px var(--green); }
+  #header .status .dot.off { background: var(--red); }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  #header .stats {
+    margin-left: auto;
+    font-size: 11px;
+    color: var(--muted);
+    display: flex;
+    gap: 20px;
+  }
+
+  #header .stats span { color: var(--green); }
+
+  /* Filters */
+  #filters {
+    position: fixed;
+    top: 48px; left: 0; right: 0;
+    height: 36px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 8px;
+    z-index: 100;
+    overflow-x: auto;
+  }
+
+  #filters::-webkit-scrollbar { height: 2px; }
+  #filters::-webkit-scrollbar-thumb { background: var(--border); }
+
+  .filter-btn {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    padding: 4px 12px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .filter-btn:hover { border-color: var(--green); color: var(--green); }
+  .filter-btn.active { background: var(--dim-green); border-color: var(--green); color: var(--green); }
+
+  /* Feed */
+  #feed {
+    position: fixed;
+    top: 84px; left: 0; right: 0; bottom: 0;
+    overflow-y: auto;
+    padding: 8px 0;
+  }
+
+  #feed::-webkit-scrollbar { width: 4px; }
+  #feed::-webkit-scrollbar-thumb { background: var(--border); }
+  #feed::-webkit-scrollbar-track { background: var(--bg); }
+
+  .entry {
+    display: flex;
+    align-items: flex-start;
+    padding: 3px 20px;
+    font-size: 12px;
+    line-height: 1.6;
+    border-bottom: 1px solid rgba(26,26,46,0.3);
+    animation: fadeIn 0.3s ease;
+    gap: 12px;
+    transition: background 0.2s;
+  }
+
+  .entry:hover { background: rgba(0,255,136,0.02); }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .entry .time {
+    color: var(--muted);
+    font-size: 11px;
+    min-width: 80px;
+    flex-shrink: 0;
+  }
+
+  .entry .icon {
+    font-size: 14px;
+    min-width: 24px;
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  .entry .summary {
+    flex: 1;
+    word-break: break-word;
+  }
+
+  .entry .summary .type-tag {
+    display: inline-block;
+    font-size: 9px;
+    padding: 1px 6px;
+    margin-right: 6px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    vertical-align: middle;
+  }
+
+  /* Type colors */
+  .type-tool_call    { background: #1a0033; color: #aa66ff; border: 1px solid #330066; }
+  .type-edit         { background: #001a33; color: #66aaff; border: 1px solid #003366; }
+  .type-write        { background: #001a33; color: #66aaff; border: 1px solid #003366; }
+  .type-git_commit   { background: #003300; color: #66ff66; border: 1px solid #006600; }
+  .type-webfetch     { background: #331a00; color: #ffaa66; border: 1px solid #663300; }
+  .type-websearch    { background: #331a00; color: #ffaa66; border: 1px solid #663300; }
+  .type-session      { background: #330033; color: #ff66ff; border: 1px solid #660066; }
+  .type-identity     { background: #330000; color: #ff6666; border: 1px solid #660000; }
+  .type-observation  { background: #002233; color: #66ffff; border: 1px solid #004466; }
+  .type-test         { background: #222200; color: #ffff66; border: 1px solid #444400; }
+
+  .entry .tags {
+    display: flex;
+    gap: 4px;
+    margin-top: 2px;
+    flex-wrap: wrap;
+  }
+
+  .entry .tags .tag {
+    font-size: 9px;
+    padding: 0 5px;
+    background: rgba(80,80,96,0.2);
+    border: 1px solid rgba(80,80,96,0.3);
+    color: var(--muted);
+    border-radius: 2px;
+  }
+
+  .entry .weight {
+    font-size: 10px;
+    color: var(--muted);
+    min-width: 30px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  /* Empty state */
+  #empty {
+    display: none;
+    text-align: center;
+    padding: 100px 20px;
+    color: var(--muted);
+  }
+
+  #empty .big {
+    font-size: 48px;
+    margin-bottom: 20px;
+    opacity: 0.3;
+  }
+
+  /* Pause indicator */
+  #paused-banner {
+    display: none;
+    position: fixed;
+    bottom: 20px; left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,0,68,0.1);
+    border: 1px solid var(--red);
+    color: var(--red);
+    padding: 8px 20px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    z-index: 100;
+    animation: pulse 1.5s infinite;
+  }
+
+  /* Settings bar at bottom */
+  #settings {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    height: 28px;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 10px;
+    color: var(--muted);
+    gap: 16px;
+    z-index: 100;
+  }
+
+  #settings label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+  #settings input[type="checkbox"] {
+    accent-color: var(--green);
+  }
+</style>
+</head>
+<body>
+
+<div id="header">
+  <h1>⬡ EAGLE EYE</h1>
+  <div class="status">
+    <span class="dot on" id="statusDot"></span>
+    <span id="statusText">RECORDING</span>
+  </div>
+  <div class="stats">
+    <span>MEMORIES: <span id="totalMemories">0</span></span>
+    <span>FEED: <span id="feedRate">0</span>/min</span>
+  </div>
+</div>
+
+<div id="filters">
+  <button class="filter-btn active" data-filter="all">ALL</button>
+  <button class="filter-btn" data-filter="tool_call">TOOL CALLS</button>
+  <button class="filter-btn" data-filter="edit">EDITS</button>
+  <button class="filter-btn" data-filter="write">WRITES</button>
+  <button class="filter-btn" data-filter="git_commit">GIT</button>
+  <button class="filter-btn" data-filter="webfetch">WEB FETCH</button>
+  <button class="filter-btn" data-filter="websearch">SEARCH</button>
+  <button class="filter-btn" data-filter="session">SESSIONS</button>
+  <button class="filter-btn" data-filter="identity">IDENTITY</button>
+  <button class="filter-btn" data-filter="observation">OBSERVATIONS</button>
+</div>
+
+<div id="feed"></div>
+
+<div id="empty">
+  <div class="big">⬡</div>
+  <div>No memories match the current filter</div>
+</div>
+
+<div id="paused-banner">⏸ PAUSED — Press SPACE to resume</div>
+
+<div id="settings">
+  <label><input type="checkbox" id="autoScroll" checked> Auto-scroll</label>
+  <label><input type="checkbox" id="soundAlert"> Sound on git push</label>
+  <span style="margin-left:auto;">ESC to top · SPACE to pause</span>
+</div>
+
+<script>
+(function() {
+  const SCRIBE_URL = 'http://127.0.0.1:4000';
+  let activeFilter = 'all';
+  let feed = [];
+  let displayed = 0;
+  let paused = false;
+  let pollTimer = null;
+  let feedCount = 0;
+  let feedTimer = 0;
+
+  const feedEl = document.getElementById('feed');
+  const emptyEl = document.getElementById('empty');
+  const totalEl = document.getElementById('totalMemories');
+  const feedRateEl = document.getElementById('feedRate');
+  const pausedBanner = document.getElementById('paused-banner');
+  const autoScrollCheck = document.getElementById('autoScroll');
+
+  // Filter buttons
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = btn.dataset.filter;
+      renderFeed();
+    });
+  });
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', (e) => {
+    if (e.key === ' ') {
+      e.preventDefault();
+      paused = !paused;
+      pausedBanner.style.display = paused ? 'block' : 'none';
+      document.getElementById('statusDot').style.background = paused ? 'var(--yellow)' : 'var(--green)';
+      document.getElementById('statusText').textContent = paused ? 'PAUSED' : 'RECORDING';
+    }
+    if (e.key === 'Escape') {
+      feedEl.scrollTop = 0;
+    }
+  });
+
+  function getIcon(type) {
+    const icons = {
+      'tool_call': '⌘',
+      'edit': '✎',
+      'write': '✎',
+      'git_commit': '⤴',
+      'webfetch': '↗',
+      'websearch': '◎',
+      'session': '◈',
+      'identity': '◆',
+      'observation': '◉',
+      'test': '⚙',
+      'file_paths': '⊞',
+      'architecture': '⊟',
+      'north_star': '★',
+      'command': '▶'
+    };
+    return icons[type] || '○';
+  }
+
+  function formatTime(ts) {
+    try {
+      const d = new Date(ts);
+      const now = new Date();
+      const diff = (now - d) / 1000;
+      if (diff < 60) return Math.floor(diff) + 's ago';
+      if (diff < 3600) return Math.floor(diff/60) + 'm ago';
+      return d.toLocaleTimeString();
+    } catch(e) {
+      return ts;
+    }
+  }
+
+  function highlightSummary(summary) {
+    // Highlight git commits, file paths, URLs
+    return summary
+      .replace(/([A-Za-z]:\\[^\s]+)/g, '<span style="color:var(--blue)">$1</span>')
+      .replace(/(https?:\/\/[^\s]+)/g, '<span style="color:var(--blue);text-decoration:underline">$1</span>')
+      .replace(/(commit [a-f0-9]{7,})/gi, '<span style="color:var(--yellow)">$1</span>');
+  }
+
+  function matchesFilter(entry) {
+    if (activeFilter === 'all') return true;
+    return entry.type === activeFilter;
+  }
+
+  function renderFeed() {
+    const filtered = feed.filter(matchesFilter);
+
+    if (filtered.length === 0) {
+      feedEl.innerHTML = '';
+      emptyEl.style.display = 'block';
+      return;
+    }
+
+    emptyEl.style.display = 'none';
+
+    // Only render new entries since last render
+    let html = '';
+    for (let i = Math.max(0, filtered.length - 200); i < filtered.length; i++) {
+      const e = filtered[i];
+      const tags = e.tags && e.tags.length > 0
+        ? '<div class="tags">' + e.tags.map(t => '<span class="tag">' + t + '</span>').join('') + '</div>'
+        : '';
+      const weightBar = e.weight != null
+        ? '<div class="weight" style="color:' + (e.weight > 0.7 ? 'var(--green)' : e.weight > 0.4 ? 'var(--yellow)' : 'var(--muted)') + '">' + (e.weight * 100).toFixed(0) + '%</div>'
+        : '';
+
+      html += '<div class="entry">'
+        + '<div class="time">' + formatTime(e.ts) + '</div>'
+        + '<div class="icon">' + getIcon(e.type) + '</div>'
+        + '<div class="summary">'
+        + '<span class="type-tag type-' + e.type + '">' + e.type + '</span>'
+        + highlightSummary(e.summary)
+        + tags
+        + '</div>'
+        + weightBar
+        + '</div>';
+    }
+
+    feedEl.innerHTML = html;
+
+    // Auto-scroll to bottom
+    if (autoScrollCheck.checked && !paused) {
+      feedEl.scrollTop = feedEl.scrollHeight;
+    }
+  }
+
+  async function poll() {
+    try {
+      const resp = await fetch(SCRIBE_URL + '/memory?limit=30');
+      const data = await resp.json();
+
+      totalEl.textContent = data.total;
+
+      // Merge new entries (dedup by id)
+      let newCount = 0;
+      const existingIds = new Set(feed.map(e => e.id));
+      for (const entry of (data.recent || [])) {
+        if (!existingIds.has(entry.id)) {
+          // Check if entry already exists by id property
+          let found = false;
+          for (const existing of feed) {
+            if (existing.id === entry.id) { found = true; break; }
+          }
+          if (!found) {
+            feed.push(entry);
+            newCount++;
+            feedCount++;
+          }
+        }
+      }
+
+      // Feed rate calculation
+      feedTimer++;
+      if (feedTimer >= 6) { // ~every 6 polls (30 seconds at 5s interval)
+        feedRateEl.textContent = (feedCount * 2); // per minute
+        feedCount = 0;
+        feedTimer = 0;
+      }
+
+      renderFeed();
+    } catch (err) {
+      document.getElementById('statusDot').className = 'dot off';
+      document.getElementById('statusText').textContent = 'OFFLINE';
+      console.error('Poll error:', err);
+    }
+  }
+
+  // Start polling
+  poll();
+  setInterval(poll, 5000);
+})();
+</script>
+</body>
+</html>

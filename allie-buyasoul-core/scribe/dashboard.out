@@ -1,0 +1,18 @@
+[DASHBOARD_DEBUG] Constructor received options.port: 4200 assigned this.port: 4200
+
+  [CORE] Booting SCRIBE Core Thinking Layer...
+  [CORE] DeepSeek: no API key (will use free sources)
+  [CORE] Web Brain ✓ (search + fetch)
+[SkillEngine] Loaded 7 skill(s).
+  [CORE] 7 skills loaded ✓
+  [CORE] Free LLM endpoints ✓
+  [CORE] Local memory: 11 learned items ✓
+  [CORE] 4/5 thinking sources online
+
+  [DASHBOARD] Server running on http://localhost:4200
+  [DASHBOARD] Dashboards:
+  [DASHBOARD]   → http://localhost:4200/            (Hub)
+  [DASHBOARD]   → http://localhost:4200/gsk-soul/   (GSK Soul Dashboard)
+  [DASHBOARD]   → http://localhost:4200/workbench/  (Workbench)
+  [DASHBOARD]   → http://localhost:4200/command-center.html   (GSK Command Center)
+  [DASHBOARD] Thinking layer: undefined/undefined sources online

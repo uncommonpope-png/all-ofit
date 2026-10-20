@@ -1,0 +1,132 @@
+/* Custom CSS for Seshat's Second Brain in Logseq */
+
+/* Make headers more prominent */
+h1 {
+  color: #2d3748;
+  border-bottom: 2px solid #4a5568;
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  color: #4a5568;
+  border-bottom: 1px solid #a0aec0;
+  padding-bottom: 0.2em;
+}
+
+/* Highlight important blocks */
+.tag[data-ref="important"] {
+  background-color: #fed7d7;
+  color: #c53030;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.tag[data-ref="decision"] {
+  background-color: #c6f6d5;
+  color: #22543d;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.tag[data-ref="pattern"] {
+  background-color: #bee3f8;
+  color: #2a4365;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Style TODO items */
+.form-checkbox:checked + span {
+  text-decoration: line-through;
+  color: #a0aec0;
+}
+
+/* Custom blockquote styling */
+blockquote {
+  border-left: 4px solid #4a5568;
+  background-color: #f7fafc;
+  padding: 1em;
+  margin: 1em 0;
+  font-style: italic;
+}
+
+/* Code blocks */
+pre.code {
+  background-color: #2d3748;
+  color: #e2e8f0;
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+/* Links styling */
+a.external-link {
+  color: #3182ce;
+  text-decoration: none;
+}
+
+a.external-link:hover {
+  text-decoration: underline;
+}
+
+/* Page references */
+a.page-ref {
+  color: #2b6cb0;
+  font-weight: 500;
+}
+
+/* Namespace styling (for patterns/, decisions/, etc.) */
+a.page-ref[data-ref*="pattern/"] {
+  color: #2a4365;
+  background-color: #bee3f8;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+a.page-ref[data-ref*="decision/"] {
+  color: #22543d;
+  background-color: #c6f6d5;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+/* Journal page title */
+.journal-title h1 {
+  color: #1a202c;
+  font-size: 1.8em;
+}
+
+/* Query results */
+.custom-query .table-auto {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-query th {
+  background-color: #edf2f7;
+  padding: 0.5em;
+  text-align: left;
+  font-weight: 600;
+}
+
+.custom-query td {
+  padding: 0.5em;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Whiteboard styling */
+.whiteboard-page {
+  background-color: #f7fafc;
+}
+
+/* Block properties */
+.block-properties {
+  font-size: 0.85em;
+  color: #718096;
+  border-left: 2px solid #e2e8f0;
+  padding-left: 0.5em;
+  margin: 0.5em 0;
+}

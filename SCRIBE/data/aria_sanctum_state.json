@@ -1,0 +1,63 @@
+{
+  "running": true,
+  "tick": 39230,
+  "aria_connected": false,
+  "connect_count": 138,
+  "command_count": 59,
+  "last_connect_at": null,
+  "last_command": null,
+  "spawn_souls": [],
+  "buildings": [
+    {
+      "id": "sbo8a4siwrqg2cgmoy8b47",
+      "type": "building",
+      "state": {
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "status": "active",
+        "health": 1
+      },
+      "visual": {
+        "theme": "pyramid",
+        "tier": 1
+      }
+    },
+    {
+      "id": "4wlrgug4upbzn52qm5ir9",
+      "type": "building",
+      "state": {
+        "pos": [
+          20,
+          0,
+          10
+        ],
+        "status": "active",
+        "health": 1
+      },
+      "visual": {
+        "theme": "crystal",
+        "tier": 2
+      }
+    },
+    {
+      "id": "rifnkh4yi6jsusz8oo8x1",
+      "type": "building",
+      "state": {
+        "pos": [
+          -15,
+          0,
+          -20
+        ],
+        "status": "active",
+        "health": 1
+      },
+      "visual": {
+        "theme": "factory",
+        "tier": 1
+      }
+    }
+  ]
+}

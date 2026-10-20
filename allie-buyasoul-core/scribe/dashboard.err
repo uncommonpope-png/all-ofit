@@ -1,0 +1,300 @@
+[SkillEngine] Failed to load data_analysis.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\data_analysis.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load http_post.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\http_post.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load crypto_sign.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\crypto_sign.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load scheduler.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\scheduler.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load telegram.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\telegram.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load llm.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\llm.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load doc_convert.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\doc_convert.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load process_monitor.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\process_monitor.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load soul_speak.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\soul_speak.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load memory_query.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\memory_query.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load chamber_scan.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\chamber_scan.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load diff_minds.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\diff_minds.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load pattern_watch.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\pattern_watch.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load soul_ledger.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\soul_ledger.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load timeline.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\timeline.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load broadcast_self.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\broadcast_self.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load knowledge_graph.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\knowledge_graph.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load introspect.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\introspect.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load rate_limiter.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\rate_limiter.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load env_config.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\env_config.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load log_writer.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\log_writer.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load health_check.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\health_check.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load retry.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\retry.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load summarize.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\summarize.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load alert_router.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\alert_router.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load watchdog.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\watchdog.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load cron_schedule.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\cron_schedule.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load diff_history.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\diff_history.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load csv_parse.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\csv_parse.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load text_diff.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\text_diff.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load event_bus.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\event_bus.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load note_pad.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\note_pad.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load report_builder.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\report_builder.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load sqlite_store.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\sqlite_store.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load time_series.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\time_series.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load workflow.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\workflow.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load rss_reader.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\rss_reader.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load email_send.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\email_send.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load anomaly.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\anomaly.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load opinion.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\opinion.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load acl.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\acl.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load tamper_detect.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\tamper_detect.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load skill_eval.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\skill_eval.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load self_write.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\self_write.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load chart.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\chart.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load heartbeat.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\heartbeat.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load kernel_sync.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\kernel_sync.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load reasoning.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\reasoning.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load prediction.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\prediction.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load agent_spawn.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\agent_spawn.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load conversation.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\conversation.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load market.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\market.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load soul_evolve.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\soul_evolve.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load conflict.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\conflict.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load plugin.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\plugin.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load voice_prep.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\voice_prep.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load profit_brain.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\profit_brain.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load aria.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\aria.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load nlp_parser.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\nlp_parser.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
+[SkillEngine] Failed to load command_registry.js: Cannot find module 'C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\command_registry.js'
+Require stack:
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\skills\engine.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\src\core-thinking-layer.js
+- C:\Users\uncom\Desktop\allie\buyasoul-core\scribe\dashboard-server.js
